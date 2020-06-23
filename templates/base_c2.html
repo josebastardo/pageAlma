@@ -1,0 +1,50 @@
+{%load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>CSS Grid - line-based placement starting point</title>
+  <link rel="stylesheet" href="{% static 'css/c2.css' %}">
+
+<style>
+
+
+
+</style>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <header> <a href="{% url 'topic_list' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span> Book of mormon blog  </a></header>
+        <article>
+                <h1>Prefacio</h1>
+               
+
+
+
+		        {% block content %}
+		        {% endblock %}
+
+
+
+        </article>
+
+        <aside><h2>Other Books</h2>
+
+
+    <div class="botton">
+    {% block sidebar %}
+	 {% endblock %}
+    </div>
+
+        </aside>
+
+        <footer>Contact me@mysite.com</footer>
+    </div>
+
+</body>
+
+</html>

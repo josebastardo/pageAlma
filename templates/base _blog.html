@@ -1,0 +1,126 @@
+{%load static %}
+
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="https://bootstrapdocs.com/v3.2.0/docs/favicon.ico">
+ 
+    <title>Blog Book of Mormon</title>
+
+    <!-- Bootstrap core CSS -->
+   <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' $}">
+   <link rel="stylesheet" href="{% static 'css/blogboo.css' %}">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+  </head>
+
+
+  <body>
+
+<!-- los Nav -->
+    <div class="blog-masthead">
+      <div class="container">
+        <nav class="blog-nav">
+          <a class="blog-nav-item active" href="https://boo.com">Home</a>
+          <a class="blog-nav-item" href="https://boot.com">New features</a>
+          <a class="blog-nav-item" href="https://boostrap.com">Press</a>
+          <a class="blog-nav-item" href="https://boots.com">New hires</a>
+          <a class="blog-nav-item" href="https://bootst.com">About</a>
+        </nav>
+      </div>
+    </div>
+
+<!--comienzo del blog -->
+    <div class="container">
+
+      <div class="blog-header">
+        <h1 class="blog-title"> The SUD  </h1>
+        <p class="lead blog-description">The no-official site for studing.</p>
+      </div>
+
+
+    <div class="row">
+        <div class="col-sm-8 blog-main">
+
+          <div class="blog-post">
+            <h2 class="blog-post-title"> Blog post</h2>
+            <p class="blog-post-meta">January 1, 2014 by <a href="https://bootstrapdocs.com">Mark</a></p>
+
+
+
+		        {% block content %}
+		        {% endblock %}
+
+    </div><!-- /.blog-post -->
+
+
+		<div class="blog-post">
+
+		<h2 class="blog-post-title"> Capitulo 1</h2>
+		<p class="blog-post-meta"> December 14, 2013 by User1 </p>
+		  
+
+
+
+	     </div><!-- /.blog-post -->
+
+
+          <ul class="pager">
+            <li><a href="https://bootstrapdocs.com/v3.2.0/docs/examples/blog/#">Previous</a></li>
+            <li><a href="https://bootstrapdocs.com/v3.2.0/docs/examples/blog/#">Next</a></li>
+          </ul>
+
+
+    </div><!-- /.blog-main -->
+
+
+<!-- usar aside     -->
+
+        <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+          <div class="sidebar-module sidebar-module-inset">
+            <h4>About</h4>
+            <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+          </div>
+
+
+<div class="sidebar-module">
+<h4>Capitulos del Libro</h4>
+
+<ol class="list-unstyled">
+  <li><a href="https://bootstrapdocs.com">March 2014</a></li>
+      {% block sidebar %}
+      {% endblock %}  
+</ol>
+</div>
+
+
+          <div class="sidebar-module">
+            <h4>cualquier cosa</h4>
+            <ol class="list-unstyled">
+              <li><a href="https://bootstrapdocs.com/v3.2.0/docs/examples/blog/#">GitHub</a></li>
+              <li><a href="https://bootstrapdocs.com/v3.2.0/docs/examples/blog/#">Twitter</a></li>
+              <li><a href="https://bootstrapdocs.com/v3.2.0/docs/examples/blog/#">Facebook</a></li>
+            </ol>
+          </div>
+        </div><!-- /.blog-sidebar -->
+
+  </div><!-- /.row -->
+
+</div><!-- /.container -->
+
+
+
+
+<div class="blog-footer">
+  <p>Blog template para construir<a href="https://getbootstrap.com/">Bootstrap</a> by <a href="https://twitter.com">@mdo</a>.</p>
+  <p>
+    <a href="https://bootstrapdocs.com">Back to top</a>
+  </p>
+</div>
+
+
+</body></html>

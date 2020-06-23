@@ -1,0 +1,119 @@
+  {% load static %}  <!-- Prepare Django to load static files -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  {% block title %}<title> Libro de Mormón </title>{% endblock %}
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Add additional CSS in static file -->
+  <link rel="stylesheet" href="{% static 'blog/css/bootstrap.min.js' %}">
+  <link rel="stylesheet" href="{% static 'blog/css/styles.css' %}"> <link rel="icon" href="https://bootstrapdocs.com/v3.2.0/docs/favicon.ico">
+ <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+ <link rel="stylesheet" href="{% static 'blog/css/blogboo.css' %}">
+
+
+<style>
+body {padding-top: 80px;  }
+.sub-header {padding-bottom: 20px;border-bottom: 1px solid #eee; }
+/*Top navigation*/
+.navbar-fixed-top { border:0px; background-color: rgb(207,232,220); padding:10px;}
+
+.sidebar-nav {margin-top: 10px;padding: 20px;list-style: none; }
+.container-fluid{padding:10px;}
+.col-sm-3{padding-left: 30; border-right: 5px solid #5882FA ;
+}
+.col-sm-9{display: inline-block;  }
+.row{}
+.intro{margin:20px;}
+.li-intro{font-size: 25px}  
+p { font-size: 20px;}
+footer { margin-bottom: 0px;padding:20px; background:   #eee}
+section{ margin: 10px;padding:20px; background:   #eee;
+
+
+display: inline-block;
+border-top: 5px solid #FE9A2E;
+font-weight: bold; }
+
+</style>
+
+
+</head>
+
+<body>
+
+
+<nav class="navbar-fixed-top">
+    <div id="navbar" class="navbar-collapse collapse">
+
+    <h2>  Contacto SUD  
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/blog "> Inicio </a></li>
+
+        <li><a href="/myblog">Blog</a></li>
+
+        <li> <a class="nav-link dropdown-toggle" href=" " id="userMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> {{ user.username }}
+          </a></li>
+      </ul>  
+    </h1>
+    </div>
+
+</nav>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+
+        <a class="navbar-brand" href="/blog "> Historias en el Libro de Mormón </a>
+
+      </div>
+    </nav>
+
+
+
+
+    <div class="container">
+      <ol class="breadcrumb my-4">
+        {% block breadcrumb %}
+
+        {% endblock %}
+      </ol>
+
+    </div>
+
+
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-3">
+      {% block sidebar %}
+      {% endblock %}  
+      </div>
+      <div class="col-sm-9 ">
+      <div class="intro">
+      {% block content %}
+     
+       <!--   <img src="{{ MEDIA_URL }} /blog/kids.jpeg" /> -->
+  
+          {% include "presentacion.html" %}
+      {% endblock %}
+    </div>
+   </div>
+
+</div>
+
+<footer>
+<div class="footer">
+  <p> Esta web fue construida usando Django
+ y los recursos didácticos de la iglesia de  Jesucristo de los Santos de los Últimos Días, ofrecidos en su sitio web 
+ www.churchofjesuschrist.org   </p>
+
+</div>
+<footer>
+
+
+</body>
+</html>

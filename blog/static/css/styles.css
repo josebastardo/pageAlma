@@ -1,0 +1,22 @@
+
+ 
+body {padding-top: 80px;}
+.sub-header {padding-bottom: 20px;border-bottom: 1px solid #eee;}
+/*Top navigation*/
+.navbar-fixed-top { border:0px; background-color:blue; padding:10px;}
+.sidebar-nav {margin-top: 10px;padding: 20px;list-style: none;}
+.container-fluid{padding:10px;}
+
+.col-sm-3{background-color:rgb(207,232,220);}
+.col-sm-9{ }
+.row{}
+.intro{margin:20px;}
+.li-intro{font-size: 25px}  
+p { font-size: 20px }
+footer {  background: orange;}
+
+
+
+
+
+
